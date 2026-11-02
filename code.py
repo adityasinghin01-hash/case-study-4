@@ -1,4 +1,4 @@
-"""Case Study 5: Sentiment Analysis on Product Reviews (AI201B CA2).
+"""Case Study 4: Sentiment Analysis on Product Reviews (AI201B CA2).
 
 Install (Python 3.11/3.12):
     pip install torch "transformers>=4.40,<5" pandas numpy scikit-learn matplotlib
@@ -171,14 +171,14 @@ def text_page(pdf, title, paragraphs, monospace=False):
         fig.text(0.08, y, content, fontsize=9 if monospace else 10, va="top",
                  family="monospace" if monospace else "sans-serif", linespacing=1.45)
         y -= 0.025 * (content.count("\n") + 1) + 0.022
-    fig.text(0.08, 0.035, "AI201B | CA2 | Case Study 5", fontsize=9, color="gray")
+    fig.text(0.08, 0.035, "AI201B | CA2 | Case Study 4", fontsize=9, color="gray")
     pdf.savefig(fig)
     plt.close(fig)
 
 
 def create_report(data, test, results, histories, times, device):
     with PdfPages(FOLDER / "output.pdf") as pdf:
-        text_page(pdf, "Case Study 5: Review Sentiment", [
+        text_page(pdf, "Case Study 4: Review Sentiment", [
             "Aim: classify Amazon product review text as negative, neutral or positive; "
             "fine-tune a HuggingFace pretrained BERT, compare an LSTM baseline, and "
             "discuss transfer learning efficiency and deployment constraints.",
